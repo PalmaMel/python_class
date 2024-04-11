@@ -4,11 +4,23 @@ Este es un script de Python diseñado para contar las ocurrencias de A, T, C y G
 
 ## Uso
 
-El script  recorre cada línea del archivo FASTA (ignorando la primera línea del encabezado) y cuenta las ocurrencias de las bases A, T, C y G en esas líneas. Luego devuelve un diccionario que contiene el recuento de cada base.
+ El usuario puede pasar el nombre del archivo que contiene la secuencia de ADN como primer argumento y, opcionalmente, especificar los nucleótidos de los cuales desea conocer la frecuencia de aparición como argumentos adicionales e imprira el recuento de aparición de estos, de no ser asi el programa imprimira en pantalla el recuento de todas las bases.
 
 ```
+import sys
+
+# Verifica que se haya proporcionado el nombre del archivo como argumento
+if len(sys.argv) < 2:
+    print("Uso: python programa.py nombre_del_archivo [nucleotidos]")
+    sys.exit(1)
+
+nombre_archivo = sys.argv[1]
+
+# Obtener los nucleótidos específicos, si se proporcionan
+nucleotidos_especificos = set(sys.argv[2:]) if len(sys.argv) > 2 else {'A', 'C', 'G', 'T'}
+
 # Abre el archivo en modo lectura
-with open('archivo.txt', 'r') as file:
+with open(nombre_archivo, 'r') as file:
     # Lee la cadena de ADN del archivo
     dna_sequence = file.read()
 
@@ -29,11 +41,25 @@ for symbol in dna_sequence:
     elif symbol == 'T':
         count_T += 1
 
-# Imprime el resultado
-print(f'El simbolo A aparece {count_A} veces.')
-print(f'El simbolo C aparece {count_C} veces.')
-print(f'El simbolo G aparece {count_G} veces.')
-print(f'El simbolo T aparece {count_T} veces.')
+# Imprime el resultado para los nucleótidos específicos o para todos si no se especifican
+if nucleotidos_especificos:
+    for nucleotido in nucleotidos_especificos:
+        count = 0
+        if nucleotido == 'A':
+            count = count_A
+        elif nucleotido == 'C':
+            count = count_C
+        elif nucleotido == 'G':
+            count = count_G
+        elif nucleotido == 'T':
+            count = count_T
+        print(f'El símbolo {nucleotido} aparece {count} veces.')
+else:
+    print(f'El símbolo A aparece {count_A} veces.')
+    print(f'El símbolo C aparece {count_C} veces.')
+    print(f'El símbolo G aparece {count_G} veces.')
+    print(f'El símbolo T aparece {count_T} veces.')
+
 ```
 
 ## Salida
