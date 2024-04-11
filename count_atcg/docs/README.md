@@ -64,7 +64,7 @@ else:
 
 ## Salida
 
-El script imprime a pantalla el recuento de apariciones de cada base.
+El script imprime a pantalla el recuento de apariciones de cada base si no se le especifico cuales se queria contar.
 
 ## Control de errores
 
@@ -72,10 +72,18 @@ El script imprime a pantalla el recuento de apariciones de cada base.
 
 ## Pruebas
 
-El script 
+Ejemplo de uso:
 
 ```
-python
+# Ejemplo de uso: Tenemos un archivo archivo.txt 
+# Este tiene la siguiente secuencia ATCGATCGATCGTACGTA
+python programa.py archivo.txt A C  # ejecutamos de la sig manera 
+python archivo.txt A C # pedimos solo cuente A y C
+
+# la salida debe ser :
+# El símbolo A aparece 4 veces.
+# El símbolo C aparece 4 veces.
+
 ```
 
 ## Datos
