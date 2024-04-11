@@ -1,0 +1,17 @@
+# Casos de prueba o escenarios para el programa count_atcg   
+    
+### Caso de prueba 1: Default
+
+- Descripción: se ingresa nombre del archivo
+- Datos de entrada: archivo.txt
+- Resultado esperado: Impresion de todos las apariciones de A,C,T yG
+
+
+### Caso de prueba 2: A y C
+
+- Descripción: Se ingresa el nombre del archivo y se especifica la impresion de A y C
+- Datos de entrada: archivo.txt A C
+
+- Resultado esperado: Impresión en pantalla del conteo de aparición de C y A
+
+        
