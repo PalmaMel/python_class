@@ -50,3 +50,10 @@ else:
     print(f'El símbolo C aparece {count_C} veces.')
     print(f'El símbolo G aparece {count_G} veces.')
     print(f'El símbolo T aparece {count_T} veces.')
+    
+# Te dejo una versión de código más simple, aún no hemos visto métodos en clase, pero son una cosa maravillosa que permite que puedas hacer un monton de cosas 
+# En este caso usé el método count:
+with open(archivo, 'r') as f:
+    DNA = f.read()
+# Obtenemos la frecuencia de aparicion de cad aletra.
+print(f"El total por base es: A:{ADN.count('A')} C:{ADN.count('C')} T:{ADN.count('T')} G:{ADN.count('G')}")
