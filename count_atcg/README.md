@@ -11,7 +11,7 @@ import sys
 
 # Verifica que se haya proporcionado el nombre del archivo como argumento
 if len(sys.argv) < 2:
-    print("Uso: python programa.py nombre_del_archivo [nucleotidos]")
+    print("Uso: Python count_atcg.py nombre_del_archivo [nucleotidos]")
     sys.exit(1)
 
 nombre_archivo = sys.argv[1]
@@ -68,17 +68,17 @@ El script imprime a pantalla el recuento de apariciones de cada base si no se le
 
 ## Control de errores
 
-
-
+Si no se ingresa el archivo o si no se encuentra el archivo ingresado el programa va a mandar un ensaje de eror a pantalla, otro mensaje de error proporcionado es para cuando el arcgivo esta vacio o contiene caracteres distintos a las bases.
+El codigo acepta como argumentos las bases como minusculas o mayusculas, de ser lo primero las convierte a mayusculas.
 ## Pruebas
 
 Ejemplo de uso:
 
 ```
-# Ejemplo de uso: Tenemos un archivo archivo.txt 
+# Ejemplo de uso: Tenemos un archivo prueba.txt 
 # Este tiene la siguiente secuencia ATCGATCGATCGTACGTA
-python programa.py archivo.txt A C  # ejecutamos de la sig manera 
-python archivo.txt A C # pedimos solo cuente A y C
+Python count_atgc.py prueba.txt A C  # ejecutamos de la sig manera 
+Python ptueba.txt A C # pedimos solo cuente A y C
 
 # la salida debe ser :
 # El símbolo A aparece 4 veces.
@@ -100,7 +100,7 @@ El código fuente está disponible en este repositorio. Se acoge con satisfacci�
 
 ## Términos de uso
 
-Este script está disponible bajo la licencia [nombre de la licencia]. Consulte el archivo LICENSE para obtener más detalles.
+Este script está disponible bajo la licencia Apache. Consulte el archivo LICENSE para obtener más detalles.
 
 ## Como citar
 

@@ -3,15 +3,37 @@
 ### Caso de prueba 1: Default
 
 - Descripción: se ingresa nombre del archivo
-- Datos de entrada: archivo.txt
-- Resultado esperado: Impresion de todos las apariciones de A,C,T yG
+- Datos de entrada: prueba.txt
+- Resultado esperado: Impresion de todos las apariciones de A,C,T y G
 
 
 ### Caso de prueba 2: A y C
 
 - Descripción: Se ingresa el nombre del archivo y se especifica la impresion de A y C
-- Datos de entrada: archivo.txt A C
+- Datos de entrada: prueba.txt A C
 
 - Resultado esperado: Impresión en pantalla del conteo de aparición de C y A
 
-        
+### Caso de prueba 3: Archivo no ingresado
+- Descripción: El usuario no va a ingresar el nombre del archivo
+- Datos de entrada: 
+- Resultado esperado: Impresión en pantalla del siguiente mensaje "Uso: Python count_atcg.py nombre_del_archivo [nucleotidos]"
+
+### Caso de prueba 4: Archivo no encontrado
+- Descripción: El usuario va a ingresar el nombre de un archivo inexistente
+- Datos de entrada: archivo_no_encontrado.txt
+- Resultado esperado: Impresión en pantalla del siguiente mensaje "Sorry, couldn´t find the file: '{nombre_archivo}'"
+
+### Caso de prueba 5: Archivo vacio
+- Descripción: El archivo no va a ingresar nombre del archivo vacio
+- Datos de entrada: archivo_void.txt
+- Resultado esperado: Impresión en pantalla del siguiente mensaje "Sorry, the file '{nombre_archivo}' is empty"
+
+### Caso de prueba 6: Caracter invalido 
+- Descripción: El texto tendra un caracter distinto a A, T, C o G 
+- Datos de entrada: archivo_invad.txt
+- Resultado esperado: Impresión en pantalla del siguiente mensaje "Error: Sequence contains '{symbol}', it is invalid character"
+### Caso de prueba 7: Argumento invalido archivo
+- Descripción: El archivo va a ingresar un caracter distinto a A, T, C o G como argumento
+- Datos de entrada: archivo.txt H
+- Resultado esperado: Impresión en pantalla del siguiente mensaje "Error: invalid base argument: {', '.join(nucleotidos_invalidos)}"
