@@ -81,5 +81,3 @@ El formato de los datos de entrada será simplemente un archivo con la secuencia
                 1. El sistema muestra un mensaje de error: "Error: invalid base argument: {', '.join(nucleotidos_invalidos)}"
         - Si el archivo tiene una base invalida 
                 1. El sistema muestra un mensaje de error: "Error: Sequence contains '{symbol}', it is invalid character"
-                
-
