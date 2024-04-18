@@ -1,17 +1,16 @@
 import sys
 
 # Verifica que se haya proporcionado el nombre del archivo como argumento
-if len(sys.argv) < 2:
+if len(sys.argv) < 2: #  lista con todos los argumentos pasados por línea de comandos, verifica dos arg
     print("Uso: Python count_atcg.py nombre_del_archivo [nucleotidos]")
     sys.exit(1)
 
-nombre_archivo = sys.argv[1]
-
+nombre_archivo = sys.argv[1] # Guarda el elemento de la lista de sys.argv que es el nomb del archivo
 try:
     # Abre el archivo en modo lectura
     with open(nombre_archivo, 'r') as file:
         # Lee la cadena de ADN del archivo
-        dna_sequence = file.read()
+        dna_sequence = file.read() #  almacena la cadena leida del archivo
 
         # Verifica si el archivo está vacío
         if not dna_sequence.strip():
@@ -24,11 +23,13 @@ try:
             print(f"Error: The file '{nombre_archivo}' contains invalid characters: {', '.join(invalid_characters)}")
             sys.exit(1)
 
-except FileNotFoundError:
+except FileNotFoundError: # Mensaje de error cuando no se encuentre el archivo
     print(f"Sorry, couldn´t find the file: '{nombre_archivo}'")
     sys.exit(1)
 
 # Obtener los nucleótidos específicos, si se proporcionan
+# en caso de estar a minusculas los nucleotidos se pasan a mayusculas
+#  se obtienen los argumentos pasados después del nombre del archivo 
 nucleotidos_especificos = set(arg.upper() for arg in sys.argv[2:]) if len(sys.argv) > 2 else {'A', 'C', 'G', 'T'}
 
 # Si se proporcionaron argumentos de nucleótidos inválidos, mostrar un mensaje de error y salir
@@ -43,7 +44,7 @@ count_C = 0
 count_G = 0
 count_T = 0
 
-# Itera sobre la cadena de ADN y cuenta las ocurrencias de cada símbolo
+# Itera sobre la cadena de DNA y cuenta las ocurrencias de cada símbolo
 for symbol in dna_sequence:
     if symbol not in {'A', 'T', 'C', 'G'}:
         print(f"Error: Sequence contains '{symbol}', it is an invalid character")
