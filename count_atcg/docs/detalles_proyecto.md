@@ -74,10 +74,10 @@ El formato de los datos de entrada será simplemente un archivo con la secuencia
 	
 - **Flujos alternativos**:
 	- Si el archivo proporcionado no existe
-		1. El sistema muestra un mensaje de error "Sorry, couldn´t find the file: '{nombre_archivo}'"
+		1. El sistema muestra un mensaje de error "ErrorFileNotFound: Sorry, couldn´t find the file: '{nombre_archivo}'"
 	- Si el archivo esta vacio
-		1. El sistema muestra un mensaje de error "Sorry, the file '{nombre_archivo}' is empty"
+		1. El sistema muestra un mensaje de error "ErrorFileEmpty: Sorry, the file '{nombre_archivo}' is empty"
         - Si proporciona un argumento valido 
-                1. El sistema muestra un mensaje de error: "Error: invalid base argument: {', '.join(nucleotidos_invalidos)}"
+                1. El sistema muestra un mensaje de error: "ErrorInvalidArg: invalid base argument: {', '.join(nucleotidos_invalidos)}"
         - Si el archivo tiene una base invalida 
-                1. El sistema muestra un mensaje de error: "Error: Sequence contains '{symbol}', it is invalid character"
+                1. El sistema muestra un mensaje de error: "ErrorInvalidChar: Sequence contains '{symbol}', it is invalid character"
