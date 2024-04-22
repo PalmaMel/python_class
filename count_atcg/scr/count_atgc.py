@@ -39,6 +39,8 @@ try:
 except FileNotFoundError: # Mensaje de error cuando no se encuentre el archivo
     print(f"ErrorFileNotFound: Sorry, couldn´t find the file: '{nombre_archivo}'")
     sys.exit(1)
+finally:
+    print("Thanks for using my code! If used correctly, you should see the answer after this message")
 
 # En caso de estar a minusculas los nucleotidos se pasan a mayusculas
 #  Se obtienen los argumentos (nucleótidos) pasados después del nombre del archivo 
