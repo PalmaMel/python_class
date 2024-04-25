@@ -1,5 +1,7 @@
 '''
-
+Author
+    Palma Luna Melissa
+    
 Arguments
     posicionales:
         nombre_archivo
@@ -10,6 +12,27 @@ Usage
     Python count_atcg.py nombre_del_archivo [nucleotidos]
     
 '''
+
+'''
+def count_all_bases (dna_sequence,symbol)
+    for symbol in dna_sequence:
+        if symbol == 'A':
+            count_A += 1
+        elif symbol == 'C':
+            count_C += 1
+        elif symbol == 'G':
+            count_G += 1
+        elif symbol == 'T':
+            count_T += 1
+
+def AT_content (dna_sequence,symbol,totalbases) 
+
+    for symbol in dna_sequence
+        if symbol == 'A'  or symbol == 'T':
+        count_A += 1
+    if count_A+=
+'''
+
 import sys
 
 # Verifica que se haya proporcionado el nombre del archivo como argumento
@@ -58,6 +81,9 @@ count_C = 0
 count_G = 0
 count_T = 0
 
+# obtener numero total de bases 
+totalbases = len(dna_sequence)
+
 # Itera sobre la cadena de DNA y cuenta las ocurrencias de cada símbolo
 for symbol in dna_sequence:
     if symbol == 'A':
@@ -87,3 +113,4 @@ else:
     print(f'La base C aparece {count_C} veces.')
     print(f'La base G aparece {count_G} veces.')
     print(f'La base T aparece {count_T} veces.')
+print (f"el numero de bases es {totalbases}")
