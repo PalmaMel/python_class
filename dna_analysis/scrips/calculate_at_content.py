@@ -15,8 +15,8 @@ Argumentos:
 """
 
 import argparse
-from dna_analysis.operations.at_content import calculate_at_content
-from dna_analysis.utils.file_io import read_dna_sequence
+from at_content import calculate_at_content
+from file_io import read_dna_sequence
 
 def main():
     parser = argparse.ArgumentParser(description="Calcula el contenido de AT en una secuencia de ADN.")
