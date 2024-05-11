@@ -13,10 +13,8 @@ Argumentos:
     <path_to_dna_file> : Ruta al archivo de texto que contiene la secuencia de ADN.
     --normalize        : Opción para normalizar el contenido de AT excluyendo 'N's del c
 """
-
+import sys
 import argparse
-from at_content import calculate_at_content
-from file_io import read_dna_sequence
 
 def main():
     parser = argparse.ArgumentParser(description="Calcula el contenido de AT en una secuencia de ADN.")
@@ -29,9 +27,13 @@ def main():
 
     try:
         # Leer la secuencia del archivo especificado utilizando la función proporcionada por file_io.py
+        sys.path.append ("dna_analysis\\utils\\file_io.py")
+        from dna_analysis.utils.file_io import read_dna_sequence
         sequence = read_dna_sequence(file_path)
-        
+    
         # Calcular el contenido de AT de la secuencia utilizando la función proporcionada por at_content.py
+        sys.path.append("dna_analysis\\operations\\at_content.py")
+        from dna_analysis.operations.at_content import calculate_at_content
         at_content = calculate_at_content(sequence, normalize=normalize)
         
         # Mostrar el resultado al usuario

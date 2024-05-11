@@ -14,9 +14,8 @@ argumentos:
     AAA codon del cual se quiere obtener numero de apariciones
 
 '''
+import sys
 import argparse
-from codon_count import calculate_codon_count
-from file_io import read_dna_sequence
 
 def main():
     parser = argparse.ArgumentParser(description="Calcula la frecuencia de un codon en una secuencia de ADN." )
@@ -29,9 +28,15 @@ def main():
 
     try:
         # Leer la secuencia del archivo especificado utilizando la función proporcionada por file_io.py
+        sys.path.append ("dna_analysis\\utils\\file_io.py")
+        from dna_analysis.utils.file_io import read_dna_sequence
         sequence = read_dna_sequence(file_path)
         # contar aparicion del codon proporcionado 
-        codon_count =  calculate_codon_count(sequence,codon)
+        sys.path.append ("dna_analysis\\operations\\codon_count")
+        from dna_analysis.operations.codon_count import calculate_codon_count
+        codon_count =  calculate_codon_count (sequence,codon)
+        
+    
         # Mostrar el resultado al usuario
         print(f"El numero de apariciones del {codon} en la secuencia es: {codon_count:.2f}")
     except Exception as e:
