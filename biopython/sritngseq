@@ -1,0 +1,25 @@
+import Bio.Seq
+seqobj= Bio.Seq.Seq ("AGCTGCTGACGT")
+seqobj
+
+## Seq ('AGCTGCTGACGT')
+seq_str = str (seqobj)
+print ('{} tiene {} nucleotidos'.format(seq_str , len(seq_str)))
+
+# AGCTGCTGACGT tiene 12 nucleotidos
+# len (seqobj) no 
+seq_str=str(seqobj)
+print (" {} tiene {}".format(seq_str,len(seq_str)))
+
+
+seq_str 
+seq_str = seq_str[::-1] # como un for 
+print ("invertido ",seq_str)
+print (seqobj.complement ())
+print (seqobj.reverse_complement ())
+print (seqobj.translate(to_stop=True))
+rna = seqobj.transcribe()
+print (rna)
+print (rna.back_transcribe())
+print (seqobj [2:0:-1])
+print (seqobj [0:3])

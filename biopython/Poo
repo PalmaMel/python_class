@@ -1,0 +1,38 @@
+class Animal:
+    def __init__(self, nombre, edad, sonido):
+        self.sonido = sonido
+        self.nombre = nombre
+        self.edad = edad
+class Perro(Animal):
+    def sonido(self):
+        return "woofwoof"
+
+class Gato(Animal):
+    def sonido(self):
+        return "Meow"
+
+"""class Conejo(Animal):
+    def __init__(self, nombre, edad, sonido, num_brincos, color):
+        super().__init__(nombre, edad, sonido)
+        self.num_brincos = num_brincos
+        self.color = color
+
+mascota = Conejo("Pelusita", 3, "Algun sonido", 4, "blanco")
+    
+print(mascota.num_brincos)  
+print(mascota.color)"""
+class Conejo(Animal):
+    def __init__(self, nombre, edad, sonido, num_brincos, color):
+        super().__init__(nombre, edad, sonido)
+        self.num_brincos = num_brincos
+        self.color = color
+
+# Crear una instancia de Conejo
+mi_conejo = Conejo("Pelusita", 3, None, 4, "blanco")
+
+# Acceder a los atributos del conejo
+print(mi_conejo.nombre)       # Pelusita
+print(mi_conejo.edad)         # 3
+print(mi_conejo.sonido)       # Algun sonido
+print(mi_conejo.num_brincos) # 4
+print(mi_conejo.color)        # blanco
