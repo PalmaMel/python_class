@@ -6,21 +6,12 @@ class Animal:
 class Perro(Animal):
     def sonido(self):
         return "woofwoof"
-
 class Gato(Animal):
     def sonido(self):
         return "Meow"
+    def usa_arenero(self):
+        return f"{self.nombre} usa el arenero"
 
-"""class Conejo(Animal):
-    def __init__(self, nombre, edad, sonido, num_brincos, color):
-        super().__init__(nombre, edad, sonido)
-        self.num_brincos = num_brincos
-        self.color = color
-
-mascota = Conejo("Pelusita", 3, "Algun sonido", 4, "blanco")
-    
-print(mascota.num_brincos)  
-print(mascota.color)"""
 class Conejo(Animal):
     def __init__(self, nombre, edad, sonido, num_brincos, color):
         super().__init__(nombre, edad, sonido)
@@ -36,3 +27,4 @@ print(mi_conejo.edad)         # 3
 print(mi_conejo.sonido)       # Algun sonido
 print(mi_conejo.num_brincos) # 4
 print(mi_conejo.color)        # blanco
+print (mi_conejo.__dict__)

@@ -1,0 +1,11 @@
+"""from Bio.Seq import Seq
+from Bio import SeqUtils
+sequence = Seq("ATGCGCGACGGCGTGATCAGCTTATAGCCGTACGACTGCTGC")
+pattern = Seq("ACG")
+results = SeqUtils.nt_search(str(sequence), pattern)
+print(results) """
+from Bio import SeqUtils
+consensus = "RGWYV"
+sequence = "CGTAGCTAGCTCAGAGCAGGGACACGTGCTAGCAACAGCGCT"
+print (SeqUtils.nt_search(sequence,consensus))
+

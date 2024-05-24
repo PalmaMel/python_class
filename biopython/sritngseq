@@ -1,5 +1,6 @@
 import Bio.Seq
 seqobj= Bio.Seq.Seq ("AGCTGCTGACGT")
+
 seqobj
 
 ## Seq ('AGCTGCTGACGT')
