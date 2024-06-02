@@ -1,12 +1,11 @@
 # Reading Frame 
-Este script 
+Este script procesa secuencias de ADN desde un archivo FASTA y extrae los codones para los seis posibles marcos de lectura, guardando los resultados en archivos de salida.
 ## Uso
 El usuario puede utilizar el script proporcionando el nombre del archivo que contiene las secuencias de ADN en formato FASTA como argumento al ejecutar el programa desde la linea de comandos.
-
 """
     python script.py secuencias.fasta
 """
-Una vez ejecutado el programa, seguira las instrucciones proporcionadas por la interfaz de usuario para seleccionar una secuencia especifica y elegir un marco de lectura. Despues de completar estos pasos, el programa procesara la secuencia seleccionada y guardara los resultados en un archivo de salida con un nombre que refleja el marco de lectura elegido.
+El programa leera las secuencias del archivo FASTA y procesara cada una en los seis posibles marcos de lectura, guardando los resultados en archivos de salida cuyo nombre refleja la secuencia procesada.
 """
 import sys
 import Bio.Seq
@@ -78,7 +77,7 @@ main()
 """
 ## Salida
 
-El programa proporcionara como salida un archivo de texto que contendra los codones extraidos de la secuencia de ADN segun el marco de lectura especificado por el usuario. El nombre de este archivo de salida dependera del marco de lectura seleccionado, y contendra los codones separados por espacios. Este archivo proporciona una representacion de los codones presentes en la secuencia de ADN seleccionada, lo que facilita su analisis y posterior procesamiento para estudios genéticos y biologicos.
+El programa proporcionará como salida un archivo de texto que contendra los codones extraidos de la secuencia de ADN según los seis marcos de lectura. Cada archivo de salida tendrá un nombre basado en la identificación de la secuencia y contendrá los codones separados por espacios. Esto facilita el analisis y posterior procesamiento para estudios geneticos y biologicos.
 
 ## Metadatos y documentacion
 
@@ -86,7 +85,7 @@ Este README ofrece informacion de uso basico. Para obtener informaciÃ³n mÃ¡s det
 
 ## Codigo fuente
 
-El codigo fuente esta disponible en este repositorio. Se acoge con satisfacciÃ³n cualquier contribucion o sugerencia a travÃ©s de solicitudes pull request.
+El codigo fuente esta disponible en este repositorio. Se acoge con satisfaccion cualquier contribucion o sugerencia a traves de solicitudes pull request.
 
 ## Terminos de uso
 
