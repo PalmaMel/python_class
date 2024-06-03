@@ -12,6 +12,15 @@ class Gato(Animal):
     def usa_arenero(self):
         return f"{self.nombre} usa el arenero"
 
+# Usa_harenero es un atributo y no un método
+class gato(animal): 
+    def __init__(self, nombre, edad, usa_arenero):
+        super().__init__(nombre, edad) #Para inicializar los atrbutos heredados
+        self.usa_arenero = usa_arenero
+    
+    def haz_ruido(self):
+        print("¡Miau!")
+
 class Conejo(Animal):
     def __init__(self, nombre, edad, sonido, num_brincos, color):
         super().__init__(nombre, edad, sonido)
