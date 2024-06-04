@@ -9,8 +9,9 @@ class Perro(Animal):
 class Gato(Animal):
     def sonido(self):
         return "Meow"
-    def usa_arenero(self):
-        return f"{self.nombre} usa el arenero"
+    def __init__(self, nombre, edad):
+        super().__init__(nombre, edad, "Meow")
+        self.usa_arenero = True
 
 class Conejo(Animal):
     def __init__(self, nombre, edad, sonido, num_brincos, color):
@@ -28,3 +29,9 @@ print(mi_conejo.sonido)       # Algun sonido
 print(mi_conejo.num_brincos) # 4
 print(mi_conejo.color)        # blanco
 print (mi_conejo.__dict__)
+
+# Crear una instancia de Gato
+mi_gato = Gato("kira", 5)
+
+# Acceder a los atributos del gato
+print (mi_gato.__dict__)
